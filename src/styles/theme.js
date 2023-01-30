@@ -7,6 +7,7 @@ export default {
     BACKGROUND_100: "#948F99",
 
     SALMON: "#FF859B",
+    SALMON_TRANSPARENT: "rgba(255, 133, 155, 0.05)",
     
     GRAY_100: "#E5E5E5",
     GRAY_200: "#F4EDE8",

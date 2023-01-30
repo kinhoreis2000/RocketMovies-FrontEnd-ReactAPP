@@ -12,7 +12,10 @@ export const Container = styled.div`
     
   }
   
-  a {
+ a:nth-child(1) {
+    margin-top: 2rem;
+
+    margin-left: 12rem;
   color: ${({theme})=> theme.COLORS.SALMON};
 
   }
@@ -35,7 +38,7 @@ export const Container = styled.div`
     justify-content: space-between;
 
     button:nth-child(1) {
-     background-color: ${({theme})=> theme.COLORS.BACKGROUND_500};
+     background-color: ${({theme})=> theme.COLORS.BACKGROUND_400};
      color: ${({theme})=> theme.COLORS.SALMON};
         
     }

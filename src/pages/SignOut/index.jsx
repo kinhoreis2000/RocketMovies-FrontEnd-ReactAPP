@@ -2,6 +2,7 @@ import {Container, Background, Form} from './styles'
 import { FiLock,FiMail,FiUser, FiArrowLeft} from 'react-icons/fi'
 import {Input} from '../../components/Input'
 import {Button} from '../../components/Button'
+import {Link} from 'react-router-dom'
 
 
 export function SignOut() {
@@ -19,7 +20,7 @@ export function SignOut() {
         <br/>
         <Button title ='Cadastrar'></Button>
         
-        <a href='/signIn'> <FiArrowLeft/> Voltar para o menu anterior</a>
+        <Link to='/signIn'> <FiArrowLeft/> Voltar para o menu anterior</Link>
       </Form>
       <Background>
       </Background>

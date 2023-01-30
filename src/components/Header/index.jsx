@@ -1,4 +1,4 @@
-import {Container} from './styles'
+import {Container, UserProfile} from './styles'
 import {Input} from '../Input'
 import { FiSearch} from 'react-icons/fi'
 
@@ -10,13 +10,13 @@ export function Header() {
 
       <Input placeholder = 'Pesquisar pelo título' type = 'text' icon={FiSearch}/>
 
-      <span>
+      <UserProfile to = '/profile'>
         <label>
           <h2>Luiz Henrique</h2>
           <a href='/'>sair</a>
         </label>
         <img src='https://github.com/kinhoreis2000.png'/> 
-      </span>
+      </UserProfile>
         
     </Container>
   )

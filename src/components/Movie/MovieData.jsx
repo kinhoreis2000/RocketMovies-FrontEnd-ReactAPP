@@ -1,10 +1,11 @@
-import {Container} from './styles'
+import {Container} from './stylesMovieData'
 import {Tag} from '../Tag'
+import { BsStar, BsStarFill } from 'react-icons/bs'
+import { FiArrowLeft } from 'react-icons/fi'
 import {Star} from '../Star'
 
-export function Movie({data, ...rest} ) {
+export function MovieData({data, ...rest} ) {
     const movieRate= data.rate
-   
     function Rate(movieRate) {
     
       if (movieRate <= 4) {
@@ -32,13 +33,17 @@ export function Movie({data, ...rest} ) {
     var isIt1 = false
 
     Rate(movieRate)
+    console.log(data.tags.map((tag) => <Tag value = {tag.name} id = {data.key}></Tag>))
 
 
   return(
     <Container >
-      <span class = 'header'>
+        <a><FiArrowLeft/>Voltar</a>
+
+      <header>
       <h1>{data.title}</h1>
-      <span class='stars'
+
+      <span
       >
         <Star className = {isIt1 ? 'show': 'hide' }></Star>
         <Star className = {isIt2 ? 'show': 'hide' }></Star>
@@ -47,27 +52,23 @@ export function Movie({data, ...rest} ) {
         <Star className = {isIt5 ? 'show': 'hide' }></Star>
         
         </span>
-
-        </span>
-     <p> {data.description} </p>
-     <div class='tags'>
-      {
-        data.tags &&
-        <footer>
-        {
-          data.tags.map(tag =><Tag
-
-            value={tag.name}
-            key={tag.id}
-           >
-
-            </Tag>
-        )
-        }
-        </footer>
-        
-      }
+    
+     </header>
+     <div class= 'user'>
+        <img src="https://github.com/kinhoreis2000.png"/>
+        <p> Criado por Luiz Henrique</p>
+        {data.updated_at}
       </div>
+    <div class='tags'>
+    {data.tags.map((tag) => <Tag value = {tag.name} id = {data.key}></Tag>
+ 
+    )}
+
+    </div >
+   
+      <main>
+     <p> {data.description} </p>
+     </main>
     </Container >
 
 

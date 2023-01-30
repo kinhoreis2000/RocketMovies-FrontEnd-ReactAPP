@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-
-export const Container = styled.div`
+import {Link} from 'react-router-dom'
+export const Container = styled.header`
   position: header;
   width: 100%;
   padding: 2.4rem 12.3rem;
@@ -20,7 +20,12 @@ export const Container = styled.div`
     font-size: 2.4rem;
   }
 
-  >span {
+  
+`
+
+export const UserProfile = styled(Link)`
+
+ 
     display: flex;
     a {
       text-decoration:none;
@@ -38,15 +43,14 @@ export const Container = styled.div`
       width:10rem;
       font-weight: 700;
       font-size: 1.4rem;
-      color:  ${({theme})=> theme.COLORS.GREY_200}
+      color:  ${({theme})=> theme.COLORS.GRAY_200}
     }
   
     label {
       text-align: end;
-      color:  ${({theme})=> theme.COLORS.GREY_200};
+      color:  ${({theme})=> theme.COLORS.GRAY_200};
 
     }
 
  
-  }
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const Container = styled.div`
   
@@ -22,12 +23,13 @@ export const Container = styled.div`
   
 
 `
-export const NewMovie = styled.button`
+export const NewMovie = styled(Link)`
   margin-top:2.4rem;
   width: 20.7rem;
   height: 4.8rem;
   border: none;
   background-color: ${({theme})=> theme.COLORS.SALMON};
+  color: ${({theme})=> theme.COLORS.BACKGROUND_500};
   border-radius: 1rem;
 
   display:flex;
