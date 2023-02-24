@@ -33,7 +33,6 @@ export function MovieData({data, ...rest} ) {
     var isIt1 = false
 
     Rate(movieRate)
-    console.log(data.tags.map((tag) => <Tag value = {tag.name} id = {data.key}></Tag>))
 
 
   return(

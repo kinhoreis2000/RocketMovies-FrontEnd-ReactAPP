@@ -7,7 +7,7 @@ import {SignOut} from '../pages/SignOut'
 export function AuthRoutes() {
   return (
     <Routes>
-      <Route path ='/signin' element ={<SignIn/>}/>
+      <Route path ='/' element ={<SignIn/>}/>
       <Route path ='/register' element ={<SignOut/>}/>
  
     </Routes>
