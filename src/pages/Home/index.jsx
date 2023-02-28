@@ -18,7 +18,7 @@ export function Home({title, ...rest}) {
             </NewMovie >
         </header>
 
-        <content>
+        <div className = 'content'>
 
 
         <Movie data={
@@ -70,7 +70,7 @@ export function Home({title, ...rest}) {
           }></Movie>
      
 
-        </content>
+        </div>
       </main>
     </Container>
   )

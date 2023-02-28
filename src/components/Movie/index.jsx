@@ -36,9 +36,9 @@ export function Movie({data, ...rest} ) {
 
   return(
     <Container >
-      <span class = 'header'>
+      <span className = 'header'>
       <h1>{data.title}</h1>
-      <span class='stars'
+      <span className='stars'
       >
         <Star className = {isIt1 ? 'show': 'hide' }></Star>
         <Star className = {isIt2 ? 'show': 'hide' }></Star>
@@ -50,7 +50,7 @@ export function Movie({data, ...rest} ) {
 
         </span>
      <p> {data.description} </p>
-     <div class='tags'>
+     <div className='tags'>
       {
         data.tags &&
         <footer>

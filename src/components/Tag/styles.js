@@ -14,7 +14,7 @@ export const Container = styled.section`
   border-radius: 10px;
   padding-right: 16px;
 
-    >button {
+    >div {
       border: none; 
       background: none; 
     }

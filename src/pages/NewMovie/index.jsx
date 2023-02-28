@@ -26,11 +26,11 @@ export function NewMovie() {
         </span>
         <TextArea placeholder='Observações'/>
         <h2>Marcadores</h2>
-        <span class = 'tagArea'>
+        <span className = 'tagArea'>
         <Tag isNew placeholder='Add a new tag'></Tag>
         <Tag value ='Node'></Tag>
         </span>
-        <div class ='buttons'>
+        <div className ='buttons'>
         <Button title='Excluir filme'> </Button>
         <Button title='Salvar alterações'> </Button>
         </div>

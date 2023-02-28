@@ -12,10 +12,11 @@ import {useAuth} from '../../hooks/auth'
 export function SignIn() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const context = useAuth()
-  const {signIn} = context 
+  const context1 = useAuth()
+  const {signIn} = context1 
 
-  function handleSignIn() {
+  function handleSignIn(e) {
+    e.preventDefault()
     signIn({email, password})
   }
 

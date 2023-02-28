@@ -23,7 +23,7 @@ export const Container = styled.header`
   
 `
 
-export const UserProfile = styled(Link)`
+export const UserProfile = styled.div`
 
  
     display: flex;

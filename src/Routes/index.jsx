@@ -7,7 +7,6 @@ export function Routes() {
 
   const {user} = useAuth()
 
-  console.log('User do index:',user)
   return (
     <BrowserRouter>
    {user? <AppRoutes/> : <AuthRoutes/>}

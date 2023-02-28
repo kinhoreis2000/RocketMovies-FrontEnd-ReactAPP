@@ -12,14 +12,13 @@ export function Tag({isNew, value, onClick, ...rest} ) {
     {...rest}
     />
 
-    <button
-      type = 'button'
+    <div 
       onClick={onClick}
       className={isNew ? 'button-add' : 'button-delete'}>
 
         {isNew? <FiPlus/> : <FiX/>}
 
-    </button>
+    </div>
 
   </Container>
 
