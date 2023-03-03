@@ -50,7 +50,6 @@ function AuthContextProvider({children}) {
     
        const response = await api.patch('/users/avatar', fileUploadForm)
        
-        console.log(response)
        user.avatar = response.data.avatar
       
       }

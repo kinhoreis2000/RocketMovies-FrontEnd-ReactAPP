@@ -3,30 +3,59 @@ import {Container} from './styles'
 import {Header} from '../../components/Header'
 
 import {MovieData} from '../../components/Movie/MovieData.jsx'
+import {useState, useEffect} from 'react'
+import {api} from '../../services/api'
+import {useParams} from 'react-router-dom'
+export function Details({...rest}) {
 
-export function Details({data, ...rest}) {
+  const [data, setData] = useState(null)
+  const params = useParams()
+
+  function childToParent(search) {
+
+  }
+
+
+
+  useEffect(()=> {
+    async function fetchNote() {
+      const response = await api.get(`/movies/${params.id}`)
+      setData(response.data)
+
+    }
+    fetchNote()
+  }, [])
+
   return(
     <Container >
-    <Header/>
-    <MovieData data={
-            {title:'Xerisclayde', 
-            rate:'2',
-            updated_at:' 22/10/2022 às 8h:00',
-            tags: [
-              {id:'1',name: 'Ficção Científica'},
-              {id:'2',name: 'Terror'},
-              {id:'3',name: 'Guerra'}
-              ],
-              description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-            }
-          }>
-    
-    </MovieData>
-
-     
+        <Header childToParent={childToParent} />
+    {       
+        data &&
+              <main>
+                
 
 
+          <MovieData 
+          key = {data.movie[0].id} 
+          data={
+                  {title:data.movie[0].title,
+                   
+                  rate:data.movie[0].rating,
+                  updated_at:data.movie[0].updated_at,
+                  tags: data.movieTags,
+                  description:data.movie[0].description
+                  }
+                }>
+          
+          </MovieData>
 
+
+
+
+              </main>
+
+
+      } 
     </Container>
   )
 };

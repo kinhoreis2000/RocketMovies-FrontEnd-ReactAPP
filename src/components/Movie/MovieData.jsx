@@ -3,8 +3,9 @@ import {Tag} from '../Tag'
 import { BsStar, BsStarFill } from 'react-icons/bs'
 import { FiArrowLeft } from 'react-icons/fi'
 import {Star} from '../Star'
-
+import {useNavigate} from 'react-router-dom'
 export function MovieData({data, ...rest} ) {
+    const navigate = useNavigate()
     const movieRate= data.rate
     function Rate(movieRate) {
     
@@ -37,7 +38,7 @@ export function MovieData({data, ...rest} ) {
 
   return(
     <Container >
-        <a><FiArrowLeft/>Voltar</a>
+        <a onClick ={() => navigate(-1)}><FiArrowLeft/>Voltar</a>
 
       <header>
       <h1>{data.title}</h1>
@@ -53,12 +54,12 @@ export function MovieData({data, ...rest} ) {
         </span>
     
      </header>
-     <div class= 'user'>
+     <div className= 'user'>
         <img src="https://github.com/kinhoreis2000.png"/>
         <p> Criado por Luiz Henrique</p>
         {data.updated_at}
       </div>
-    <div class='tags'>
+    <div className='tags'>
     {data.tags.map((tag) => <Tag value = {tag.name} id = {data.key}></Tag>
  
     )}

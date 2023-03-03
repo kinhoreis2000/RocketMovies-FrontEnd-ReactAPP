@@ -2,9 +2,8 @@ import {Container} from './styles'
 import {Tag} from '../Tag'
 import {Star} from '../Star'
 
-export function Movie({data, ...rest} ) {
-    const movieRate= data.rate
-   
+export function Movie({data, onClick, ...rest} ) {
+    const movieRate= data.rating
     function Rate(movieRate) {
     
       if (movieRate <= 4) {
@@ -35,7 +34,7 @@ export function Movie({data, ...rest} ) {
 
 
   return(
-    <Container >
+    <Container  onClick ={onClick}>
       <span className = 'header'>
       <h1>{data.title}</h1>
       <span className='stars'

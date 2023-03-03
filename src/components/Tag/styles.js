@@ -21,10 +21,11 @@ export const Container = styled.section`
 
     .button-delete {
       color:  RED;
-
+      cursor:pointer;
     }
     .button-add {
       color:  ${({theme}) => theme.COLORS.SALMON};
+      cursor:pointer;
 
     }
     > input {

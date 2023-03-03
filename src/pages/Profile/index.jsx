@@ -31,7 +31,8 @@ export function Profile() {
 }
 
 
-  async function handleUpdateUser() {
+  async function handleUpdateUser(e) {
+    e.preventDefault()
     const user = {
       name, 
       email, 
